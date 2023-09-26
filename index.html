@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <p class="logo">
+            Portfolio.
+        </p>
+        <nav>
+            <a href="#home" onclick="navIndicator('home-id')" id="home-id">Home</a>
+            <a href="#about-me" id="about-id" onclick="navIndicator('about-id')">About me</a>
+            <a href="#skills" id="skills-id" onclick="navIndicator('skills-id') ,bar()" >Skills</a>
+            <a href="#projects" id="projects-id" onclick="navIndicator('projects-id')">Projects</a>
+            <a href="#hire-me" id="hire-id" onclick="navIndicator('hire-id')">Hire me</a>
+        </nav>
+    </header>
+    <div class="background-image-1"></div>
+    
+    
+    
+    <!-- home section page -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <p class="introduction-text">
+                    Hello, I am
+                </p>
+                <p class="name-text">
+                    Immanuel
+                </p>
+                <div class="size">
+                    <div class="work">
+                        Website Designer 
+                    </div>
+                    <div class="work">
+                        
+                    </div>
+                </div>
+                
+                <p class="home-content body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis error itaque pariatur omnis totam. Ducimus nostrum numquam perspiciatis velit quisquam tempora cum eligendi voluptate, ut repellendus dicta consequatur eum ipsum.</p>
+    
+                <a href="#" class="btn hire">Hire Me</a>
+                <a href="#" class="btn cv">Download CV</a>
+            </div>
+            <div class="image-bg">
+                <div class="background-image-2"></div>
+                <div class="background-image-3"></div>
+                <img src="images/Mesa de trabajo 1.png" >
+            </div>
+        </section>
+        <section class="about" id="about-me">
+            <div class="container">
+                <div class="background-image"></div>
+                <div class="background-image-1"></div>
+                <img src="images/8598082.jpg">
+                <div class="box">
+                    <p class="title-text">
+                        About
+                    </p>
+                    <p class="body-text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem eveniet est recusandae voluptate velit similique repellat voluptas blanditiis dolorum, quasi, maxime doloribus, architecto illo optio magni dolore. Quia amet repudiandae qui odio fugiat deleniti dignissimos minima perspiciatis provident, enim magni.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills" id="skills">
+            <div class="container">
+                <img src="images/skill.png">
+                <div class="background-image-3"></div>
+                <div class="rect-bg"></div>
+                <div class="rect-bg-one"></div>
+                <div class="box">
+                    <p class="skill">Skills</p>
+                    <div class="bar-container">
+                        <p>HTML</p>
+                        <div class="bar-bg">
+                            <div class="bar" id="html-bar"></div>
+                            <p class="initial-percentage">0%</p>
+                            <p class="final-percentage">30%</p>
+                        </div>
+                    </div>
+    
+                    <div class="bar-container" id="css">
+                        <p>CSS</p>
+                        <div class="bar-bg">
+                            <div class="bar"></div>
+                            <p class="initial-percentage">0%</p>
+                            <p class="final-percentage">70%</p>
+                        </div>
+                    </div>
+    
+                    <div class="bar-container" id="js">
+                        <p>JS</p>
+                        <div class="bar-bg">
+                            <div class="bar"></div>
+                            <p class="initial-percentage">0%</p>
+                            <p class="final-percentage">30%</p>
+                        </div>
+                    </div>
+    
+                    <div class="bar-container" id="dart">
+                        <p>DART</p>
+                        <div class="bar-bg">
+                            <div class="bar"></div>
+                            <p class="initial-percentage">0%</p>
+                            <p class="final-percentage">85%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="project-content">
+                <div class="bg-box"></div>
+                <div class="bg-box"></div>
+                <div class="bg-box"></div>
+                <div class="bg-box"></div>
+                <p class="main">
+                    Projects
+                </p>
+                <p class="sub-main">
+                    Projects
+                </p>
+                <p class="ss-main">
+                    projects
+                </p>
+                <div class="contents">
+                    <div class="image-display">
+                        
+                    </div>
+                    <div class="text-display">
+                        <p class="display-header">Crypto Currency Website</p>
+                        <p class="display-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt quos laudantium molestiae commodi dolore provident totam laborum voluptatum! Sunt eum rerum ipsum quam molestiae ducimus eligendi quae, eos corporis deserunt!</p>
+                    </div>
+                    <img src="images/guy.png" alt="">
+                </div>
+            </div>
+        </section>
+    
+        <section class="hire" id="hire-me">
+            <div class="hire-container">
+                <form action="" method="post">
+                    <!-- full  name -->
+                    <label for="fname">Full name</label>
+                    <input type="text" placeholder="Full Name..." id="fname">
+                    
+                    <!-- message -->
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" style="height: 200px; margin-top: 5px;" placeholder="Send me a Message..."></textarea>
+
+                    <!-- submit button -->
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </section>
+</body>
+</html>

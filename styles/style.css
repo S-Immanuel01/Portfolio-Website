@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:wght@100;200;300;400;500;600;700&family=Mooli&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+:root {
+    --header-text-color: white;
+    --header-nav-color: white;
+    --body-text-color: black;
+    --button-text-color: white;
+    --orange: rgba(255, 109, 5, 0.925);
+    --button-bg-color: var(--orange);
+    --deepblue: rgb(12, 26, 53);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+header {
+    font-family: Inter;
+    z-index: 1000;
+    top: 0px;
+    position: fixed;
+    padding: 0px 100px;
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+
+section {
+    height: 100vh;
+
+}
+
+header p {
+    font-family: Inspiration, Mooli;
+    text-shadow: 1px 1px .5rem rgba(0,0,0,0.1);
+    z-index: 100;
+    display: inline-block;
+    font-weight: 900;
+    color: var(--header-text-color);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+nav {
+    font-weight: 500;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+}
+nav a:nth-child(1) {
+    color: var(--orange);
+}
+nav a {
+    font-size: .8em;
+    text-decoration: none;
+    color: var(--header-nav-color);
+    text-shadow: 0 0 .2rem rgb(194, 194, 194);
+}
+
+
+nav a:hover {
+    text-shadow: none;
+    color: var(--orange);
+}
+
+.background-image-1 {
+    /* bg ellipse gradient */
+z-index:0;
+position: absolute;
+width: 600px;
+height: 600px;
+left: -125px;
+top: -250px;
+border-radius: 50%;
+background: radial-gradient(90.46% 90.46% at 4.42% 6.18%, rgba(255, 116, 17, 0.59) 0%, #735194 120%);
+filter: blur(30px);
+}
+
+.home {
+    scroll-snap-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 100;
+    color: var(--body-text-color);
+    padding: 0 100px;
+}
+
+.home .introduction-text {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: Inspiration, Arial, Helvetica, sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px;
+    font-size: 2.5rem;
+}
+
+.home .name-text {
+    font-family: Inter;
+    font-size: 5rem;
+    font-weight:600;
+    
+}
+.home .home-content {
+    position: relative;
+}
+
+.home .home-content .work:nth-child(1) {
+    /* margin: 0 auto; */
+    font-family: Inter;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    font-size:1.6rem;
+    color:rgba(255, 109, 5, 0.925);
+    font-weight: 900;
+    border-right: 3px solid var(--orange);
+    animation: 
+    typing-effect 6s steps(20, end) infinite ,
+    blink .5s infinite;
+    margin-bottom: 20px;
+}
+
+/* backwards-typing 4s forwards 6s, */
+
+.home-content .size {
+    width: fit-content;
+}
+
+.home-content .work:nth-child(2) {
+    display: none;
+    width: fit-content;
+}
+
+@keyframes typing-effect {
+    from {
+        width: 0;
+        height: 2.5rem;
+    }
+    to {
+        width: 100%;
+        height: 2.5rem;
+    }
+}
+
+@keyframes backwards-typing {
+    from {
+        width: 100%
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right: 9px solid transparent;
+    }
+    to{
+        border-right: 9px solid var(--orange);
+    }
+}
+
+.home-content.body {
+    
+    font-family: Inter;
+    text-align: justify;
+    width: 89%;
+    margin-bottom: 50px;
+}
+
+.btn.hire{
+    display: inline;
+    background-color: var(--button-bg-color);
+    padding: 10px 20px;
+    font-family: Mooli;
+    text-decoration: none;
+    color: var(--button-text-color);
+    border-radius: 50px;
+    box-shadow: 2px 1px 1rem rgba(255, 109, 5, 0.925);
+    transition: all;
+}
+
+.btn.hire:hover {
+    box-shadow: 2px 1px 1rem white;
+    color: black;
+    background-color: white;
+    border: 1px solid var(--orange);
+}
+
+.btn.cv {
+    margin-left: 20px;
+    border: 1px solid var(--orange);
+    padding: 10px 20px;
+    font-family: Mooli;
+    text-decoration: none;
+    border-radius: 50px;
+    color: black;
+    transition: all;
+}
+
+.btn.cv:hover{
+    box-shadow: 2px 1px 1rem rgba(255, 109, 5, 0.925);
+    color: white;
+    background-color:var(--orange);
+}
+.image-bg {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+.home img {
+    position: relative;
+    width: 49rem;
+    z-index: 100;
+}
+
+.background-image-2 {
+    /* bg ellipse gradient */
+z-index:0;
+position: absolute;
+width: 400px;
+height: 400px;
+right: 390px;
+bottom: 50px;
+border-radius: 50%;
+background: radial-gradient(90.46% 90.46% at 4.42% 6.18%, rgba(244, 103, 0, 0.59) 0%, #735194 120%);
+filter: blur(30px);
+animation:  move-2 5s infinite ease-in-out alternate;
+}
+
+@keyframes move-2 {
+    from {
+        /* margin-left: 100px; */
+    }
+    to {
+        margin-right: 100px;
+        margin-bottom: 50px;
+    }
+}
+
+.background-image-3{
+    /* bg ellipse gradient */
+z-index:0;
+position: absolute;
+width: 200px;
+height: 200px;
+left: 550px;
+top: 10px;
+border-radius: 50%;
+background: radial-gradient(90.46% 90.46% at 4.42% 6.18%, rgba(244, 103, 0, 0.59) 0%, #735194 120%);
+filter: blur(30px);
+transition: all;
+animation: move 5s  infinite alternate ease-in-out;
+}
+
+@keyframes move {
+    from {
+        /* margin-left: 100px; */
+    }
+    to {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+}
+
+
+.about {
+    scroll-snap-align: start;
+    background-color: white;
+}
+
+.about .container {
+    top: 30px;
+    position: relative;
+    padding: 60px 100px;
+}
+
+.about .container  .box {
+    position: absolute;
+    right: 150px;
+    width: 50rem;
+    height: 60vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: center;
+    background: linear-gradient(-45deg, rgba(115, 81, 148, 0.5) 5%, rgba(250, 235, 215, 0.5) 50%);
+    box-shadow: 1px -1px 1rem white, -1px 1px .1rem gray;
+    padding: 5rem;
+    border-radius: 50px;
+}
+
+.about .container img {
+    position: absolute;
+    z-index: 10;
+    top: 25vh;
+    left: 10vw;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.about .container .title-text {
+    font-weight: 900;
+    font-family: Inter;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about .container .body-text {
+    width: 50%;
+    text-align: center;
+}
+
+.about .background-image {
+    z-index:0;
+position: absolute;
+width: 300px;
+height: 300px;
+left: 50px;
+top: 500px;
+border-radius: 50%;
+background: radial-gradient(90.46% 90.46% at 4.42% 6.18%, rgba(244, 103, 0, 0.59) 0%, #735194 120%);
+filter: blur(30px);
+transition: all;
+animation: move-bg-2 5s infinite alternate ease-in-out;
+}
+
+.about .background-image-1 {
+    z-index:0;
+position: absolute;
+width: 300px;
+height: 300px;
+left: 1050px;
+top: -100px;
+border-radius: 50%;
+background: radial-gradient(90.46% 90.46% at 4.42% 6.18%, rgba(244, 103, 0, 0.59) 0%, #735194 120%);
+filter: blur(30px);
+transition: all;
+animation: move 5s infinite alternate ease-in-out;
+}
+
+
+@keyframes move-bg-2 {
+    to {
+        margin-left: 200px;
+        margin-top: 50px;
+    }
+}
+
+.skills {
+    background-color: white;
+}
+
+.skills .container {
+    position: relative;
+    padding: 60px 100px;
+}
+
+.skills .container .box {
+    background-color: transparent;
+    position: absolute;
+    top: 10rem;
+    left: 20rem;
+    padding: 5rem 5rem;
+    border-radius: 20px;
+    border-top:1px solid var(--orange);
+    border-right: 1px solid #735194;
+    border-bottom: 1px solid #735194;
+    border-left: 1px solid var(--orange);
+    box-shadow: 1px -1px 2rem var(--orange);
+    width: 40rem;
+}
+
+.skill {
+    font-family: Inter;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.skills .container .box .bar-container{
+    margin-bottom: 20px;
+}
+.skills .container .box .bar-container p {
+    font-family: Inter;
+    font-weight: 900;
+}
+
+.bar-bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgb(207, 207, 207);
+    border-radius: 50px;
+    min-width: 100%;
+}
+.bar{
+    background-color: #735194;
+    border-radius: 50px;
+    box-shadow: 0 0 .5rem #d1a2ff;
+    margin-right: 10px;
+}
+
+.final-percentage {
+    display: none;
+}
+
+.skills .background-image-3 {
+    animation:bg-3 5s ease-in-out alternate infinite;
+}
+
+@keyframes bg-3 {
+    to {
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+}
+
+.skills .rect-bg {
+    background: linear-gradient(var(--orange), #735194);
+    opacity: 50%;
+    position: absolute;
+    right:0;
+    top: 15px;
+    width: 30rem;
+    height: 35px;
+    border-bottom-left-radius: 50px; 
+    border-top-left-radius: 50px;
+}
+
+.skills .rect-bg-one {
+    background: linear-gradient(var(--orange), #735194);
+    opacity: 50%;
+    position: absolute;
+    top: 88vh;
+    left:0;
+    width: 30rem;
+    height: 35px;
+    border-bottom-right-radius: 50px; 
+    border-top-right-radius: 50px;
+}
+
+.skills img{
+    z-index: 10;
+    position: absolute;
+    top: calc(50vh + 60px);
+    width: 19rem;
+}
+.projects {
+    background-color: white;
+    overflow-y: hidden;
+}
+
+.project-content {
+    position: relative;
+    height: 100%;
+    widows: 100%;
+}
+
+.project-content .bg-box:nth-of-type(1) {
+    height: 100%;
+    width: 33.3%;
+    background-color: #d1a2ff;
+    position: absolute;
+    z-index: 0;
+}
+
+.project-content .bg-box:nth-of-type(2) {
+    height: 50%;
+    width: 33.3%;
+    background-color: rgba(252, 167, 107, 0.925);
+    position: absolute;
+    z-index: 0;
+    left: 29.6rem;
+}
+.project-content .bg-box:nth-of-type(3) {
+    height: 50%;
+    width: 33.3%;
+    background-color: rgba(255, 146, 182, 0.925);
+    position: absolute;
+    z-index: 0;
+    left: calc(29.6rem *2);
+}
+.project-content .bg-box:nth-of-type(4) {
+    height: 50%;
+    width: calc(29.6rem*2);
+    background-color: rgba(107, 206, 252, 0.925);
+    position: absolute;
+    z-index: 0;
+    top: 50vh;
+    left: 29.6rem;
+}
+
+.projects .ss-main,
+.projects .sub-main,
+.projects .main {
+    position: absolute;
+    color: white;
+    opacity: 25%;
+    font-family: Inspiration;
+    top: -2rem;
+    font-size: 30rem;
+    left: 10rem;
+}
+
+
+.projects .sub-main {
+    top: 30rem;
+    font-size: 15rem;
+    left: 30rem;
+}
+
+.projects .ss-main{
+    top: 45rem;
+    font-size: 5rem;
+    left: 45rem;
+}
+/* total width of screen 98.9 */
+.contents {
+    position: relative;
+    top: 10vh;
+    left: 10vw;
+    height: 80%;
+    width: 80%;
+}
+
+.contents .image-display{
+    border: 1rem solid black;
+    background-image: url(/images/work-img.png);
+    flex-wrap: wrap;
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    border-radius: 20px;
+    opacity: 70%;
+}
+
+.contents .image-display:hover {
+    opacity: 100%;
+}
+
+.contents .text-display {
+    position: absolute;
+    background: linear-gradient(-45deg,rgba(225,225,225, 0.1) 15%, rgba(225,225,225,1));
+    height: 15rem;
+    width: 15rem;
+    bottom: 0;
+    left:0;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.display-header {
+    font-family: Inter;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.display-body {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contents img {
+    position: absolute;
+    width: 25rem;
+    right: 2rem;
+    bottom: 0;
+}
+.hire {
+    background-color: var(--deepblue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hire-container {
+
+    padding: 40px;
+    border-radius: 50px;
+    height: 30rem;
+    
+}
+
+
+.hire-container input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    resize: vertical;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.hire-container input[type=submit] {
+    padding: 10px;
+    background-color: var(--orange);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
